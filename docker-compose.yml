@@ -1,0 +1,16 @@
+version: "3"
+services:
+  main_app:
+    container_name: dockerised-yelpcamp
+    restart: always
+    build: .
+    ports:
+      - 80:3000
+    links:
+      - mongo
+    volumes: ["./:/usr/src/app"]
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - 27017:27017
