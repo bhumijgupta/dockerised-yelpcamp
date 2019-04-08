@@ -87,7 +87,7 @@ router.delete("/:comment_id", middleware.checkCommentOwner, (req, res) => {
             res.redirect("back");
         } else {
             req.flash("suc", "Comment successfully added");
-            res.redirect("/campgrounds/" + req.params.id)
+            res.redirect("/campgrounds/" + req.params.id);
         }
     });
 });

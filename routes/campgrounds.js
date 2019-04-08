@@ -27,10 +27,10 @@ router.post("/", middleware.isLoggedIn, (req, res) => {
         username: req.user.username
     };
     var newCampground = {
-        name: name,
-        image: image,
-        description: description,
-        author: author
+        name,
+        image,
+        description,
+        author
     };
     Campground.create(newCampground, function (err, newlyCreated) {
         if (err) {
@@ -98,7 +98,7 @@ router.delete("/:id", middleware.checkCampgroundOwner, (req, res) => {
             req.flash("suc", "Successfully deleted campground");
             res.redirect("/campgrounds");
         }
-    })
+    });
 });
 
 
