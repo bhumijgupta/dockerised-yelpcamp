@@ -2,7 +2,7 @@
 var Campground = require("../models/campground"),
     Comment = require("../models/comment");
 
-var middlewareObj = {}
+var middlewareObj = {};
 
 middlewareObj.checkCampgroundOwner = (req, res, next) => {
     if (req.isAuthenticated()) {
@@ -43,12 +43,12 @@ middlewareObj.checkCommentOwner = (req, res, next) => {
                     res.redirect("back");
                 }
             }
-        })
+        });
     } else {
         req.flash("err", "You need to login first");
         res.redirect("back");
     }
-}
+};
 
 middlewareObj.isLoggedIn = (req, res, next) => {
 
@@ -59,4 +59,4 @@ middlewareObj.isLoggedIn = (req, res, next) => {
     res.redirect("/login");
 };
 
-module.exports = middlewareObj
+module.exports = middlewareObj;
