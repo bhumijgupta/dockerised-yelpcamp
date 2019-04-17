@@ -1,14 +1,25 @@
 {
-  "name": "v1",
-  "version": "1.0.0",
-  "description": "YelpCamp v1",
+  "name": "dockerised-yelpcamp",
+  "version": "1.0.1",
+  "description": "This is the dockerised version of YelpCamp",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
-  "author": "Bhumij Gupta",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhumijgupta/dockerised-yelpcamp.git"
+  },
+  "keywords": [
+    "docker"
+  ],
+  "author": "Bhumij Gupta <bhumijgupta@gmail.com>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhumijgupta/dockerised-yelpcamp/issues"
+  },
+  "homepage": "https://github.com/bhumijgupta/dockerised-yelpcamp#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "connect-flash": "^0.1.1",
@@ -21,13 +32,5 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^5.0.1"
-  },
-  "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0"
   }
 }
